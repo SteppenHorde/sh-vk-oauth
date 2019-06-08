@@ -1,0 +1,27 @@
+{% extends "core/base.html" %}
+{% load static %}
+
+{% block title %}VK Oauth{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" type="text/css" href="{% static "core/css/main.css" %}">
+  {% if allow_user_n_friends_css %}
+    <link rel="stylesheet" type="text/css" href="{% static "core/css/user_n_friends.css" %}">
+  {% endif %}
+{% endblock %}
+
+{% block content %}
+
+  {% if not_authed %}
+    <div class="row">
+      <a href="{{ oauth_url }}"><button class="btn btn-outline-dark btn-lg" type="submit">Авторизоваться</button></a>
+    </div>
+  {% else %}
+    {% include "core/user_n_friends_list.html" %}
+  {% endif %}
+
+{% if allow_vk_oauth_script %}
+  <script type="text/javascript" src="{% static 'core/js/vk_oauth.js' %}"></script>
+{% endif %}
+
+{% endblock %}

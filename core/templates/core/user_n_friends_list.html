@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm user">
+    <img class="user_photo" src="{{ user.photo_200 }}" alt="Фото пользователя {{ user.first_name }} {{ user.last_name }}">
+    <a class="user_name stretched-link" href="https://vk.com/id{{ user.id }}">{{ user.first_name }} {{ user.last_name }}</a>
+  </div>
+</div>
+
+<div class="row friends_list">
+  {% for friend in friends %}
+    <div class="col-sm friend">
+      <img class="friend_photo" src="{{ friend.photo_50 }}" alt="Фото пользователя {{ friend.first_name }} {{ friend.last_name }}">
+      <a class="friend_name stretched-link" href="https://vk.com/id{{ friend.id }}">{{ friend.first_name }} {{ friend.last_name }}</a>
+    </div>
+  {% endfor %}
+</div>

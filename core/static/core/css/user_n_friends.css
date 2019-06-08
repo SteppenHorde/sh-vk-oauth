@@ -1,0 +1,75 @@
+.row {
+  margin-bottom: 1.5vmax;
+}
+
+.user {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.friend_photo {
+  border-radius: 50%;
+}
+
+.user_photo {
+  border-radius: 50%;
+}
+
+.friend {
+  margin-top: 1.5vmax;
+}
+
+a.friend_name {
+  margin-left: 1vmax;
+}
+
+a.user_name {
+  margin-left: 1vmax;
+}
+
+@media (min-width: 1200px) {
+    div.friend > img.friend_photo {
+        width: 16%;
+    }
+    div.user > img.user_photo {
+        width: 10%;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) {
+    div.friend > img.friend_photo {
+        width: 25%;
+    }
+    div.user > img.user_photo {
+        width: 15%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 999px) {
+    div.friend > img.friend_photo {
+        width: 35%;
+    }
+    div.user > img.user_photo {
+        width: 25%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 799px) {
+    div.friend > img.friend_photo {
+        width: 50%;
+    }
+    div.user > img.user_photo {
+        width: 25%;
+    }
+}
+
+@media (max-width: 599px) {
+    div.friend > img.friend_photo {
+        width: 10%;
+    }
+    div.user > img.user_photo {
+        width: 15%;
+    }
+}
