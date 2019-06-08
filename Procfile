@@ -1,1 +1,1 @@
-web: gunicorn sh-world-views.wsgi --log-file -
+web: gunicorn sh-vk-oauth.wsgi --log-file -
